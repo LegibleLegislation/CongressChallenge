@@ -1,9 +1,9 @@
 
 ![Logo](capitol_seal_small.png)
 
-#Legible Legislation
+# Legible Legislation
 
-##Understand Congressional Data with Tags
+## Understand Congressional Data with Tags
 
 Congress creates thousands of pages of legislation each year. How can the public understand the broad trends and topics in the legislative world?  
 
