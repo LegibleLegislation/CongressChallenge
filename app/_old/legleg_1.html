@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Legible Legislation</title>
+
+	<link rel="stylesheet" href="css/ibm-plex.min.css">
+	<link rel="stylesheet" href="css/legleg_1.css">
+	
+	<script src="js/d3.v4.min.js"></script>
+
+</head>
+<body>
+
+	<div class="wrapper" id="app">
+		<div class="header">
+			<div class="title">Legible Legislation</div>
+			<div class="subhead">Subhead explainer go here.</div>
+		</div>
+
+		<div class="main">
+
+			<div class="billDetail">
+				
+				<div class="title">{{ currentBill.short_title }} <span class="id mono">{{ currentBill.bill_id_nice }}</span></div>
+				<div class="official">"{{ currentBill.official_title }}"</div>
+				<div class="sponsor">
+					<div class="name">{{ currentBill.sponsor_title }} {{ currentBill.sponsor_name }} | {{ currentBill.sponsor_party }}</div>
+				</div>
+				<div class="date">{{ formatDate(currentBill.status_at) }}</div>
+				<div class="status">{{ currentBill.status }}</div>
+				<div class="tags">
+					<div class="tag" v-for="tag in relevantTags">
+						{{ tag }}
+					</div>
+				</div>
+				<pre>{{ currentBill }}</pre>
+
+			</div>
+
+			<div class="timeline">
+				<h2>Bill Timeline</h2>
+				<div class="timelineItem" v-for="item in timelineData">
+					<div class="date">{{ item.datetime }} ({{ item.bills.length }} bills)</div>
+					<div class="bill clicky" v-for="bill in item.bills" @click="getBill(bill)">{{ bill }}</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sponsors">
+				<hr>
+				<h2>Sponsors</h2>
+				<div class="dems">
+					<h3>dems</h3>
+					<div class="info">{{ sponsorData.Democrat.bills.length }} bills</div>
+					<div class="example">last one is <span @click="getBill(sponsorData.Democrat.bills[sponsorData.Democrat.bills.length - 1])">{{ sponsorData.Democrat.bills[sponsorData.Democrat.bills.length - 1] }}</span></div>
+				</div>
+				<div class="repubs">
+					<h3>repubs</h3>
+					<div class="info">{{ sponsorData.Republican.bills.length }} bills</div>
+					<div class="example">first one is {{ sponsorData.Republican.bills[0] }}</div>
+				</div>
+				<div class="indies">
+					<h3>indies</h3>
+					<div class="info">{{ sponsorData.Independent.bills.length }} bills</div>
+					<div class="example">first one is {{ sponsorData.Independent.bills[0] }}</div>
+				</div>
+			</div>
+
+			<div class="policies">
+				<hr>
+				<h2>Policies</h2>
+				<div class="metaPolicy" v-for="meta in policyData">
+					<h3>{{ meta.name }}</h3>
+					<div class="subPolicy" v-for="sub in meta.children">
+						<div class="subPolicyName">{{ sub.name }}</div>
+						<div>{{ sub.bills.length }} bills</div>
+						<div class="example">first one is {{ sub.bills[0] }}</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="bills">
+				<hr>
+				<h2>Bills</h2>
+			</div>
+			
+		</div>
+
+		<div class="footer">
+			<div class="txt">TR Labs 2018</div>
+		</div>
+	</div>
+
+	<script src="js/vue.js"></script>
+	<script src="js/d3-selection-multi.v1.min.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/legleg_1.js"></script>
+	
+</body>
+</html>

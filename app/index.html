@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>leg leg by party</title>
+	<link rel="stylesheet" href="css/ibm-plex.min.css">
+	<link rel="stylesheet" href="css/legleg_party.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="modal hide">
+			<div class="content">
+				<div class="closeX">x</div>
+				<div class="about">
+
+					<h1>Legible Legislation</h1>
+
+					<h2>Understand Congressional Data with Tags</h2>
+					
+					<p>Congress creates thousands of pages of legislation each year. How can the public understand the broad trends and topics in the legislative world?</p>  
+					
+					<p>Our submission to the Congressional Data Challenge is a method to alleviate the deluge of data and make it more accessible to the public. We combine freely available data from the federal government with data science to identify succinct phrases called ‘tags’ that reflect the primary topic of the legislation. These tags make it possible for the public to look across the massive Congressional data set in a single glance. </p>
+					
+					<p>We have implemented our idea as a public-domain corpus of code that identifies tags and generates JSON data for web consumption. We use a free and publically-accessible tool, called Thomson Reuters Intelligent Tagging, to assist in identifying topics in text.</p>
+					
+					<p>There are many ways that our method can be visualized. We demonstrate one way in an interactive web application available here: <a href="http://18.216.2.143/">http://18.216.2.143/</a></p>
+					
+					<p>We have also explained our creation in a video: <a href="http://18.216.2.143/video">http://18.216.2.143/video</a> and we have released our code in the public domain: <a href="https://github.com/LegibleLegislation/CongressChallenge">https://github.com/LegibleLegislation/CongressChallenge</a></p>
+					 
+					
+					Participants:
+					<ul>
+					<li>Andrew Mulder (Thomson Reuters)
+					<li>Brian Romer (Thomson Reuters)
+					<li>Dave Reed (Thomson Reuters)
+					<li>Mattie Wasiak (MIT undergraduate)
+					<li>Shreyan Jain (MIT undergraduate)
+					</ul>
+					
+					Sources:
+					<ul>
+					<li>Congress.gov
+					<li>US Government Publishing Office (FDSys)
+					<li>github.com/unitedstates/congress: Public domain data collectors 
+					<li>Thomson Reuters Intelligent Tagging: A free and open natural language processing tool
+					</ul>
+
+				</div>
+				<div class="video">video goes here</div>
+			</div>
+		</div>
+		<div class="tooltip"></div>
+		<div class="nav">
+			<div class="item about">about</div>
+			<div class="item video">video</div>
+			<div class="item"><a href="#">code</a></div>
+		</div>
+		<div class="header">
+			<div class="title">Legible Legislation</div>
+			<div class="subhead">View of bill tags by party, <select name="congressNum" id="congressNum">
+				<option value="115">115</option>
+				<option value="114">114</option>
+				<option value="113">113</option>
+			</select>th Congress</div>
+		</div>
+
+		<div class="main">
+			<div class="party Democrat"></div>
+			<div class="common"></div>
+			<div class="party Republican"></div>
+		</div>
+	</div>
+
+	<script src="js/d3.v4.min.js"></script>
+	<script src="js/d3-selection-multi.v1.min.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/underscore-min.js"></script>
+	<script src="js/legleg_party.js"></script>
+
+</body>
+</html>
