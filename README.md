@@ -13,7 +13,7 @@ We have implemented our idea as a public-domain corpus of code that identifies t
 
 There are many ways that our method can be visualized. We demonstrate one way in an interactive web application available here: [http://18.216.2.143/](http://18.216.2.143/)
 
-We have also explained our creation in a video: [http://18.216.2.143/video](http://18.216.2.143/video) and we have released our code in the public domain: [https://github.com/LegibleLegislation/CongressChallenge](https://github.com/LegibleLegislation/CongressChallenge)
+We have also explained our creation in a video: [https://www.youtube.com/watch?v=iaIAHMwJax0](https://www.youtube.com/watch?v=iaIAHMwJax0) and we have released our code in the public domain: [https://github.com/LegibleLegislation/CongressChallenge](https://github.com/LegibleLegislation/CongressChallenge)
  
 
 Participants:

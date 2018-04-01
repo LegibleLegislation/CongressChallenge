@@ -1,0 +1,209 @@
+$dem: #bbd8e8
+$rep: #eea6aa
+
+body
+	font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 16px
+	font-weight: 300
+	color: #e1e1e1
+	background: #6a6275
+
+a
+	text-decoration: none
+	// border-bottom: 1px dashed #e1e1e1
+	color: inherit
+
+	&:hover
+		background: #e1e1e1
+
+.mono
+	font-family: 'IBM Plex Mono', 'Menlo', Courier, monospace
+
+.wrapper
+	width: 1200px
+	margin: 0 auto 100px
+	position: relative
+
+	.nav
+		position: absolute
+		top: 20px
+		right: 10px
+		text-align: right
+		margin: 10px
+		color: #555
+
+		.item
+			margin: 0 0 5px 0
+			text-decoration: none
+			border-bottom: 1px dashed #e1e1e1
+			color: inherit
+
+			&:hover
+				background: #e1e1e1
+
+	.header
+		margin: 0 0 50px 0
+		width: 100%
+		text-align: center
+
+		.title
+			font-size: 48px
+			background: rgba(white, 0.7)
+			color: #222
+			padding: 40px 0
+			// display: inline-block
+			margin: 0 0 10px 0
+			background: linear-gradient(to right, $dem, $rep)
+
+		.subhead
+			font-size: 22px
+
+.main
+	position: relative
+	display: flex
+	// flex-
+
+.party
+	margin: 0 0 40px 30px
+	width: 400px
+
+	.title
+		font-size: 28px
+
+	&.Democrat
+		text-align: right
+		margin: 0 30px 0 0
+
+.common
+	text-align: center
+	width: 340px
+	margin-right: 12px // hacky!
+
+	.title
+		font-size: 28px
+
+.tags
+	margin-top: 10px
+	.tag
+		padding: 2px 6px
+		background: #e1e1e1
+		color: #111
+		display: inline-block
+		margin: 0 3px 3px 0
+		font-size: 11px
+		font-weight: 500
+		position: relative
+		cursor: pointer
+
+		.bg
+			position: absolute
+			z-index: -1
+			height: 100%
+			right: 0
+			background: $rep
+
+			&.Demo
+				background: $dem
+				left: 0
+
+		.badge
+			// position: absolute
+			z-index: 10
+			top: 0
+			right: 5px
+			padding: 0px 4px
+			background: #e1e1e1
+			display: inline-block
+			margin-left: 5px
+
+.tagCommonTxt
+	margin-top: 5px
+
+.Democrat
+	.tag
+		background: $dem
+
+.Republican
+
+	.tag
+		background: $rep
+
+select
+	font-size: 18px
+
+.tooltip
+	position: absolute
+	z-index: 100
+	width: 450px
+	padding: 10px
+	background: rgba(white, 0.98)
+	color: #222
+	border: 1px solid #777
+	opacity: 0
+
+.matchingBillNames
+	font-size: 12px
+
+.hide
+	display: none
+
+.modal
+	position: absolute
+	z-index: 200
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(black, 0.5)
+
+	.content
+		position: absolute
+		top: 50px
+		left: 200px
+		background: rgba(white, 0.9)
+		color: #222
+		padding: 10px
+		width: 800px
+
+		.closeX
+			position: absolute
+			cursor: pointer
+			top: 10px
+			right: 10px
+
+.tagDetail
+	max-height: 700px
+	overflow: scroll
+	width: 700px
+	margin-left: 50px
+	margin-bottom: 50px
+
+	// hr
+	// 	float: left
+	// 	clear: left
+	// 	width: 100%
+
+.modalTag
+	background: #999
+	color: #fff
+	padding: 3px 6px
+
+	&.related
+		padding: 2px 4px
+		font-weight: 300
+		font-size: 12px
+		// float: left
+
+
+.officialTitle
+	font-size: 12px
+	margin: 10px 0
+	// float: left
+
+.otherTags
+	margin: 5px 0
+	// float: left
+	// clear: left
+	margin-right: 10px
+
+
